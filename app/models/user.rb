@@ -8,7 +8,7 @@ class User < ApplicationRecord
 
   validates :full_name, presence: true
   validates :address, presence: true
-  validates :lat, presence: true
-  validates :lng, presence: true
-  validates :photo, presence: true
+
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
 end
