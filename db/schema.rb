@@ -10,30 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
 ActiveRecord::Schema.define(version: 2019_11_26_141817) do
-  
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "chat_rooms", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-  
   create_table "activities", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "messages", force: :cascade do |t|
-    t.string "recepient_id"
-    t.text "content"
-    t.integer "chat_room_id"
+  create_table "chat_rooms", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "sender_id"
   end
 
   create_table "dog_activities", force: :cascade do |t|
@@ -57,6 +47,15 @@ ActiveRecord::Schema.define(version: 2019_11_26_141817) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_dogs_on_user_id"
+  end
+
+  create_table "messages", force: :cascade do |t|
+    t.string "recepient_id"
+    t.text "content"
+    t.integer "chat_room_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "sender_id"
   end
 
   create_table "users", force: :cascade do |t|
