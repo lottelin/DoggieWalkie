@@ -28,13 +28,12 @@ U9 = User.create(full_name: 'Jolene Mallone', address: 'Fehrbelliner Str. 43, Be
 U10 = User.create(full_name: 'Giselle Hobosh', address: 'Bernauer Str. 89, Berlin', email: 'giselle@example.com', password: '123456', password_confirmation: '123456')
 
 
-Dog 1
 url = "https://res.cloudinary.com/dlajprtba/image/upload/v1574434880/DoggieWalkie/Tinkerbell.jpg"
-d1 = Dog.create(name:'Tinkerbell', user: U1, breed:'Toy Poodle', sex:'Female', age:'Puppy', hangouts:'Maurpark, Der Spree, Hundegaten Maurpark')
+d1 = Dog.create(name:'Tinkerbell', user: U1, breed:'Toy Poodle', sex:'Female', age:'Puppy', hangouts:'Maurpark, Der Spree, Hundegaten Maurpark', remote_photo_url: url)
 
-Dog 2
+
 url = "https://res.cloudinary.com/dlajprtba/image/upload/v1574765745/DoggieWalkie/BeagleRyan.jpg"
-d2 = Dog.create(name:'Ryan', user: U2, breed:'Beagle', sex:'Male' age:'Puppy', hangouts:'Gorlitzer Park, Hundewiese Tempelhofer Feld')
+d2 = Dog.create(name:'Ryan', user: U2, breed:'Beagle', sex:'Male', age:'Puppy', hangouts:'Gorlitzer Park, Hundewiese Tempelhofer Feld', remote_photo_url: url)
 
 
 Activity1 = Activity.create(name:'Running')
@@ -49,7 +48,7 @@ DogActivity.create(dog_id: 1, activity_id: Activity3)
 DogActivity.create(dog_id: 1, activity_id: Activity5)
 DogActivity.create(dog_id: 1, activity_id: Activity3)
 
-DogActivity.create(dog_id: 1, activity_id: Activity2)
-DogActivity.create(dog_id: 1, activity_id: Activity4)
-DogActivity.create(dog_id: 1, activity_id: Activity5)
-DogActivity.create(dog_id: 1, activity_id: Activity3)
+DogActivity.create(dog_id: 2, activity_id: Activity2)
+DogActivity.create(dog_id: 2, activity_id: Activity4)
+DogActivity.create(dog_id: 2, activity_id: Activity5)
+DogActivity.create(dog_id: 2, activity_id: Activity3)
