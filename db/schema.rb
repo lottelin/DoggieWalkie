@@ -10,10 +10,39 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_25_164511) do
+ActiveRecord::Schema.define(version: 2019_11_26_132746) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "activities", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "dog_activities", force: :cascade do |t|
+    t.bigint "activity_id"
+    t.bigint "dog_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["activity_id"], name: "index_dog_activities_on_activity_id"
+    t.index ["dog_id"], name: "index_dog_activities_on_dog_id"
+  end
+
+  create_table "dogs", force: :cascade do |t|
+    t.string "name"
+    t.string "breed"
+    t.string "sex"
+    t.string "age"
+    t.string "photo"
+    t.text "hangouts"
+    t.string "map_marker"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_dogs_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -32,4 +61,7 @@ ActiveRecord::Schema.define(version: 2019_11_25_164511) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "dog_activities", "activities"
+  add_foreign_key "dog_activities", "dogs"
+  add_foreign_key "dogs", "users"
 end
