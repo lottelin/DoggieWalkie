@@ -1,0 +1,72 @@
+.signin {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  height: 80vh;
+}
+
+.signinheader {
+  left: 88px;
+  top: 214px;
+}
+
+
+
+.signin-doghead {
+  width: 160px;
+  margin-left: 15px;
+}
+
+
+
+
+
+.signin-logo-text img {
+  width: 202px;
+  margin-top: 5px;
+}
+
+.form-inputs {
+  left: 104px;
+  top: 462px;
+}
+
+
+.signin body {
+  color:black;
+}
+
+#sign-in {
+  width: 189px;
+  height: 42px;
+  background: #73FFCD;
+  border: 1px solid #C4C4C4;
+  box-sizing: border-box;
+  border-radius: 26px;
+  color: black;
+}
+
+.sign-up {
+  text-align: center;
+  color: $gray;
+}
+
+#sign-up {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 189px;
+  height: 42px;
+  background: #73FFCD;
+  border: 1px solid #C4C4C4;
+  box-sizing: border-box;
+  border-radius: 26px;
+  color: black;
+}
+
+#sign-up p {
+  margin: 0;
+  margin-top: 1rem;
+  text-align: center;
+}
