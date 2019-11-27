@@ -1,4 +1,4 @@
-.card-trip {
+.card-show {
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
@@ -16,7 +16,7 @@
     opacity: .7;
     margin: 0;
   }
-  .card-trip-infos {
+  .card-show-infos {
     padding: 16px;
     display: flex;
     justify-content: space-around;
@@ -24,7 +24,7 @@
     position: relative;
     height: 180px;
   }
-  .card-trip-user {
+  .card-show-user {
     position: absolute;
     left: 50%;
     margin-left: -100px;
@@ -42,19 +42,4 @@
     object-fit: cover;
   }
 }
-
-.purple-card {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #F1EAFF;
-}
-
-.green-card {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #DFFFF4;
-}
-
 
