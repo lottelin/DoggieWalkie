@@ -1,0 +1,30 @@
+
+<div class="card-trip">
+  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+  <div class="card-trip-infos">
+    <div class="dog-name">
+      <h2><%= @dog.name %></h2>
+      <p>Proud owner: @<%= @dog.user.full_name %></p>
+    </div>
+    <% if @dog.photo.present? %>
+      <%#= cl_image_tag @dog.photo, alt: "dog photo" %>
+      <%= cl_image_tag @dog.photo, alt: "dog photo", class: "card-trip-user" %>
+    <% else %>
+      <%= image_tag "https://images.unsplash.com/photo-1422565096762-bdb997a56a84?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80", alt: "dog", class: "card-trip-user" %>
+    <% end %>
+    <!-- <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" /> -->
+  </div>
+</div>
+
+<div class="purple-card">
+  <p>hi</p>
+  <p>hello</p>
+</div>
+
+<div class="green-card">
+  Activities: <% @dog.activities.each do |dog| %>
+    <%= dog.name %>
+  <% end %>
+  <p>hi</p>
+  <p>hello</p>
+</div>
