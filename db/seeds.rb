@@ -37,7 +37,7 @@ user_image_url = "https://res.cloudinary.com/dlajprtba/image/upload/v1574806895/
 u9 = User.create(full_name: 'Jolene Mallone', address: 'Fehrbelliner Str. 43, Berlin', email: 'jolene@example.com', password: '123456', password_confirmation: '123456', photo: user_image_url)
 
 user_image_url = "https://res.cloudinary.com/dlajprtba/image/upload/v1574806894/DoggieWalkie/owner/Giselle_Hobosh_as9zuz.png"
-u10 = User.create(full_name: 'Giselle Hobosh', address: 'Bernauer Str. 89, Berlin', email: 'giselle@example.com', password: '123456', password_confirmation: '123456', photo: user_image_url)
+u10 = User.create(full_name: 'Giselle Hobosh', address: 'Fehrbelliner Str. 60, Berlin', email: 'giselle@example.com', password: '123456', password_confirmation: '123456', photo: user_image_url)
 
 user_image_url = "https://res.cloudinary.com/dlajprtba/image/upload/v1574850880/DoggieWalkie/owner/Gordana_kkujn0.png"
 u11 = User.create(full_name: 'Gordana Macura', address: 'Rheinsberger Str. 76, Berlin', email: 'me@example.com', password: '123456', password_confirmation: '123456', photo: user_image_url)
