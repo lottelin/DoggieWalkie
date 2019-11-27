@@ -3,8 +3,7 @@
   <div class="card-show-infos">
     <div class="dog-name">
       <h2><%= @dog.name %></h2>
-      <p>Proud owner: @<%= @dog.user.full_name %> <a href="#"><i class="fab fa-facebook"><i class="fab fa-instagram"></i></a>
-    <a href="#"></i></a> </p>
+      <p>Proud owner: @<%= @dog.user.full_name %> </p>
     </div>
     <% if @dog.photo.present? %>
       <%= cl_image_tag @dog.photo, alt: "dog photo", class: "card-show-user" %>
