@@ -15,6 +15,28 @@
   width: 160px;
   margin-left: 15px;
   margin-top: 100px;
+  animation: shake 3s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  animation-iteration-count:infinite;
+}
+// transform: translate3d(-1px, 0, 0)
+// transform: translate3d(2px, 0, 0)
+@keyframes shake {
+  6%, 14% {
+   transform: rotate(-3deg);
+  }
+
+  10%, 18% {
+  transform:  rotate(3deg);
+  }
+
+  // 30%, 50%, 70% {
+  //   transform: translate3d(-4px, 0, 0);
+  // }
+
+  // 40%, 60% {
+  //   transform: translate3d(4px, 0, 0);
+  // }
 }
 
 .signin-logo-text img {
@@ -65,3 +87,4 @@
   margin-top: 1rem;
   text-align: center;
 }
+
