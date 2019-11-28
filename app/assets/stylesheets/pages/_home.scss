@@ -40,3 +40,26 @@
   }
 }
 
+
+.search-form {
+  z-index: 100;
+  width:100%;
+  position:absolute;
+}
+
+.searchinput {
+  width: 80%;
+  margin: 20px auto;
+  display: block;
+  border-radius: 13px;
+  border: none;
+  padding: 10px;
+}
+
+.mapboxgl-popup{
+  position:absolute;
+  bottom:0;
+  // height:20%;
+  max-width: 240px;
+  transform: translate(0%, 0%) translate(-50px, -50px);
+}
