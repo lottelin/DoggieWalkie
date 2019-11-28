@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   resources :dogs
 
 
-  resources :chat_rooms, only: :show do
+  resources :chat_rooms, only: [:show, :create] do
     resources :messages, only: :create
   end
 

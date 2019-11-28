@@ -1,14 +1,58 @@
 <div class="card-show">
   <img src="#" />
   <div class="card-show-infos">
-    <div class="dog-name">
-      <h2><%= @dog.name %></h2>
-      <p>Proud owner: @<%= @dog.user.full_name %> </p>
-    </div>
     <% if @dog.photo.present? %>
-      <%= cl_image_tag @dog.photo, alt: "dog photo", class: "card-show-user" %>
+    <%= cl_image_tag @dog.photo, alt: "dog photo", class: "card-show-user" %>
     <% else %>
-      <%= image_tag "#", alt: "dog", class: "card-show-user" %>
+    <%= image_tag "#", alt: "dog", class: "card-show-user" %>
     <% end %>
+    <div class="dog-info">
+      <h2><%= @dog.name %></h2>
+      <% if @chat_room %>
+      <%= link_to "Let's Talk!", chat_room_path(@chat_room), class: 'btn btn-primary'  %>
+      <% else %>
+      <%= link_to "Let's Talk!",
+      chat_rooms_path(
+        @chat_room,
+        sender_id: current_user.id,
+        receiver_id: @dog_owner.id
+        ),
+      method: :post,
+      class: 'btn btn-primary'
+        %>
+        <% end %>
+      </div>
+    </div>
+    <div class="owner-links">
+      <p>Proud owner: @<%= @dog.user.full_name %> </p>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+    </div>
+  </div>
+
+  <div class="purple-card row">
+    <div class="col">
+      <p>Breed: <%= @dog.breed %></p>
+      <p>Age: <%= @dog.age %></p>
+      <!-- <p>Sex: <%#= @dog.sex %></p> -->
+    </div>
+    <div class="col">
+     <p>Find me at: <%= @dog.hangouts %></p>
+   </div>
+ </div>
+
+ <div class="green-card">
+  <h3>Activities: </h3>
+  <div class="row">
+    <div class="col">
+      <% @dog.activities[0..1].each do |activity| %>
+      <p><%= activity.name %></p>
+      <% end %>
+    </div>
+    <div class="col">
+      <% @dog.activities[2..3].each do |activity| %>
+      <p><%= activity.name %></p>
+      <% end %>
+    </div>
   </div>
 </div>

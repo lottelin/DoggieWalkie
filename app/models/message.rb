@@ -1,10 +1,18 @@
 class Message < ApplicationRecord
   belongs_to :chat_room
-  belongs_to :user, foreign_key: :sender_id
-  # belongs_to :user_2, foreign_key: :recepient_id, class_name: 'User'
+  belongs_to :sender, class_name: "User"
+  belongs_to :receiver, class_name: "User"
   validates :content, presence: true, allow_blank: false
 
+  def self.first_between(user_a, user_b)
+    self.where(
+      '(receiver_id = :user_a AND sender_id = :user_b) OR (sender_id = :user_a AND receiver_id = :user_b)',
+      user_a: user_a.id,
+      user_b: user_b.id
+    ).first
+  end
+
   def from?(some_user)
-    user == some_user
+    sender == some_user
   end
 end
