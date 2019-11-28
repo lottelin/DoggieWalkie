@@ -56,7 +56,7 @@ u9.save!
 
 user_image_url = "https://res.cloudinary.com/dlajprtba/image/upload/v1574806894/DoggieWalkie/owner/Giselle_Hobosh_as9zuz.png"
 
-u10 = User.create(full_name: 'Giselle Hobosh', address: 'Bernauer Str. 89, Berlin', email: 'giselle@example.com', password: '123456', password_confirmation: '123456')
+u10 = User.create(full_name: 'Giselle Hobosh', address: 'Fehrbelliner Str. 71, Berlin', email: 'giselle@example.com', password: '123456', password_confirmation: '123456')
 u10.remote_photo_url = user_image_url
 u10.save!
 
