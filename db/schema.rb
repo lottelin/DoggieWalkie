@@ -50,12 +50,15 @@ ActiveRecord::Schema.define(version: 2019_11_26_164450) do
   end
 
   create_table "messages", force: :cascade do |t|
-    t.string "recepient_id"
+    t.bigint "sender_id"
+    t.bigint "receiver_id"
     t.text "content"
-    t.integer "chat_room_id"
+    t.bigint "chat_room_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "sender_id"
+    t.index ["chat_room_id"], name: "index_messages_on_chat_room_id"
+    t.index ["receiver_id"], name: "index_messages_on_receiver_id"
+    t.index ["sender_id"], name: "index_messages_on_sender_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -78,4 +81,6 @@ ActiveRecord::Schema.define(version: 2019_11_26_164450) do
   add_foreign_key "dog_activities", "activities"
   add_foreign_key "dog_activities", "dogs"
   add_foreign_key "dogs", "users"
+  add_foreign_key "messages", "users", column: "receiver_id"
+  add_foreign_key "messages", "users", column: "sender_id"
 end
