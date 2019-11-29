@@ -1,12 +1,17 @@
 <div class="popup-dog">
   <div class="popup-dog-info">
     <h2><%= user.dog.name %></h2>
-    <p><%= user.dog.breed %> </p>
-    <p><%= user.dog.sex %> </p>
-    <p><%= user.dog.age %> </p>
+      <div class="modal-info">
+        <p style="margin-bottom: auto;"><%= user.dog.breed %> </p>
+        <p style="margin-bottom: auto;"><%= user.dog.sex %> </p>
+        <p style="margin-bottom: auto;"><%= user.dog.age %> </p>
+      </div>
+        <%= link_to "Check Me Out", dog_path(user.dog), class: 'btn btn-primary checkoutbtn'  %>
+
   </div>
 
   <div class="popup-dog-avatar">
-    <%=image_tag("logo.png", alt: "")%>
+    <%=image_tag(user.dog.photo_url, alt: "")%>
   </div>
+
 </div>
