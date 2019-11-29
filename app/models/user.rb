@@ -13,4 +13,10 @@ class User < ApplicationRecord
   after_validation :geocode, if: :will_save_change_to_address?
 
   mount_uploader :photo, PhotoUploader
+
+  def has_new_messages?
+    # Logic
+    # should return true or false
+
+  end
 end
