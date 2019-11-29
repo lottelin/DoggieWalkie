@@ -1,7 +1,7 @@
 <div class="chat_room">
   <div class="row chat_room">
     <div class="col-sm-6 col-sm-offset-3">
-      <div class="chat-header"><h4><%= @chat_room.messages.first.receiver.dog.name %> and <%= @chat_room.messages.first.sender.dog.name %></h4>
+      <div class="chat-header"><%= @chat_room.messages.first.receiver.dog.name %> and <%= @chat_room.messages.first.sender.dog.name %> are chatting...
       </div>
         <div class="messages">
           <% @chat_room.messages.each do |message| %>
