@@ -137,13 +137,13 @@ DogActivity.create(dog_id: d1.id, activity_id: Activity1.id)
 DogActivity.create(dog_id: d1.id, activity_id: Activity3.id)
 DogActivity.create(dog_id: d1.id, activity_id: Activity5.id)
 DogActivity.create(dog_id: d1.id, activity_id: Activity2.id)
-DogActivity.create(dog_id: d1.id, activity_id: Activity4.id)
+
 
 DogActivity.create(dog_id: d2.id, activity_id: Activity2.id)
 DogActivity.create(dog_id: d2.id, activity_id: Activity4.id)
 DogActivity.create(dog_id: d2.id, activity_id: Activity5.id)
 DogActivity.create(dog_id: d2.id, activity_id: Activity3.id)
-DogActivity.create(dog_id: d2.id, activity_id: Activity1.id)
+
 
 DogActivity.create(dog_id: d3.id, activity_id: Activity1.id)
 DogActivity.create(dog_id: d3.id, activity_id: Activity3.id)
@@ -189,6 +189,6 @@ DogActivity.create(dog_id: d11.id, activity_id: Activity1.id)
 DogActivity.create(dog_id: d11.id, activity_id: Activity3.id)
 DogActivity.create(dog_id: d11.id, activity_id: Activity5.id)
 DogActivity.create(dog_id: d11.id, activity_id: Activity2.id)
-DogActivity.create(dog_id: d11.id, activity_id: Activity4.id)
+
 
 puts 'Activities are done'
