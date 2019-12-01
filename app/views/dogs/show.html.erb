@@ -26,8 +26,6 @@
 
 
 
-
-
     <div class="dog-info">
       <h2><%= @dog.name %></h2>
       <% if @chat_room %>
@@ -43,18 +41,22 @@
       class: 'btn btn-primary chat-btn'
         %>
         <% end %>
-    </div>
+     </div>
+
   </div>
 
 
     <div class="owner-links">
       <p>Proud owner: @<%= @dog.user.full_name %> </p>
       <div class="social-media">
-        <a href="#"><i class="fab fa-instagram"></i></a>
+<!--         <a href="#"><i class="fab fa-instagram"></i></a> -->
+        <%= image_tag("instagram.png", :alt => "insta", :id =>"insta") %>
         <a href="#"><i class="fab fa-facebook"></i></a>
       </div>
     </div>
-  </div>
+
+
+</div>
 
 
 
@@ -86,8 +88,4 @@
           <% end %>
         </div>
       </div>
-  </div>
-
-  <div class="favorites-card">
-
   </div>
