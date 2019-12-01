@@ -7,18 +7,18 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   border-radius: 13px;
   margin: 10px;
-  h2 {
-    font-size: 16px;
-    font-weight: bold;
-    margin: 0;
-    display: flex;
-    justify-content: space-around;
-  }
   p {
     font-size: 12px;
     opacity: .7;
     margin: 0;
   }
+
+.dog-info h2 {
+  font-size:35px;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+}
 
 // dog & owner profile photo
 .card-show-user {
@@ -26,7 +26,7 @@
     left: 50%;
     margin-left: -100px;
     top: 50%;
-    margin-top: -230px;
+    margin-top: -178px;
     width: 200px;
     height: 200px;
     border-radius: 50%;
@@ -49,6 +49,11 @@
     margin-top: 95px;
   }
 
+#flip {
+  width: 35px;
+  height: 35px;
+  margin-left: 230px;
+}
 
 .owner-links {
   display: flex;
@@ -64,7 +69,7 @@
 p {
 font-style: normal;
 font-weight: normal;
-font-size: 14px;
+font-size: 16px;
   }
 }
 
