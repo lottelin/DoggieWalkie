@@ -71,18 +71,18 @@
         <li>Breed -  <%= @dog.breed %></li>
         <li>Age -  <%= @dog.age %></li>
         <li>Sex - <%= @dog.sex %></li>
-        <li>Find me at<br> <%= @dog.hangouts %></li>
+        <li>Find me at <%= @dog.hangouts %></li>
       </ul>
     </div>
   </div>
 
 
 
-<div class="activity">
+<div class="activities">
   <h3>Activities</h3>
-  <div class="activity-card">
+  <div class="activities-card">
     <div class="row">
-      <div class="col">
+      <div class="col pr-0">
         <ul>
         <% @dog.activities[0..1].each do |activity| %>
         <li><%= activity.name %></li>
@@ -90,7 +90,7 @@
         </ul>
       </div>
 
-      <div class="col">
+      <div class="col pl-0">
         <ul>
         <% @dog.activities[2..3].each do |activity| %>
         <li><%= activity.name %></li>

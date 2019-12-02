@@ -14,7 +14,7 @@
   }
 
 .background-img {
-  height:180px;
+  height:160px;
 }
 
 .dog-info h2 {
@@ -30,7 +30,7 @@
     left: 50%;
     margin-left: -100px;
     top: 50%;
-    margin-top: -178px;
+    margin-top: -200px;
     width: 200px;
     height: 200px;
     border-radius: 50%;
@@ -58,6 +58,10 @@
   height: 35px;
   margin-left: 230px;
   z-index: 1;
+  position: absolute;
+  margin-top: -40px;
+  border-radius: 50%;
+  background: white;
 }
 
 .dog-info {
@@ -116,21 +120,22 @@ font-size: 16px;
 
 
 
+
+// info
+
 .info-card {
-  margin: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #eacdfe;
-  padding-left: 10px;
-  height: 140px;
+  background-color: $primary;
+  // background-image: url('../images/back1.png');
+  height: 148px;
+  width: 380px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 13px;
   margin: 15px 10px 10px 10px;
   h3 {
   font-size: 20px;
   font-weight: bold;
-  padding-left:5px;
+  padding: 7px 0px 0px 22px;
+
   }
 }
 
@@ -138,9 +143,11 @@ font-size: 16px;
 .col-info {
   background-color: white;
   border-radius: 13px;
-  height: 140px;
-  width: 290px;
-  padding: 10px 10px 10px 5px;
+  height: 110px;
+  width: 380px;
+  padding: 5px 10px 10px 2px;
+  margin: 0;
+  font-size: 17px;
 }
 
 .col-info p {
@@ -149,37 +156,47 @@ font-size: 16px;
 
 
 
-.activity {
-  background-color: #DFFFF4;
+
+
+
+
+
+// activity
+
+.activities {
+  background-color: $primary;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 13px;
   margin: 15px 10px 10px 10px;
 }
 
 
-
-.activity-card {
+.activities-card {
   overflow: hidden;
   align-items: center;
   background-color: white;
   height: 65px;
-  width: 290px;
+  width: 380px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 13px;
-  // padding: 8px 8px 8px 14px;
+  font-size: 17px;
   h3 {
     font-size:20px;
   }
+}
+
+.col {
+  padding-top: 7px;
 }
 
 .col p {
   margin-bottom: 0 !important;
 }
 
-.activity h3 {
+.activities h3 {
   font-size: 20px;
   font-weight: bold;
-  padding-left:5px;
+  padding: 7px 0px 0px 22px;
 }
 
 
