@@ -1,3 +1,7 @@
+.chat_room {
+  margin-top: auto;
+}
+
 .messages {
   font-size: 16px;
   color: #726b6b;
@@ -46,7 +50,9 @@
 .message_content {
   margin-bottom: 0;
   border-style: none;
+  font-size: 20px;
 }
+
 input.form-control {
   border: 1px solid #ECECEC;
   box-shadow: none;
@@ -58,6 +64,16 @@ input.form-control {
     box-shadow: none;
   }
 }
+
+.form-control {
+  width: 265px;
+
+}
+
+.textarea.form-control {
+  height: 50px;
+}
+
 .chat-header {
   background-color: #73FFCD;
   color: black;
@@ -77,4 +93,10 @@ input.form-control {
   margin: 10px;
   text-align: center;
 
+}
+
+#chatinput {
+position: fixed;
+ bottom: 80px;
+ width: 100%;
 }
