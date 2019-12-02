@@ -3,7 +3,7 @@
 }
 
 .messages {
-  font-size: 16px;
+  font-size: 20px;
   color: #726b6b;
   background-color: #ffffff;
   padding: 20px;
@@ -50,13 +50,13 @@
 .message_content {
   margin-bottom: 0;
   border-style: none;
-  font-size: 20px;
+  font-size: 20px !important;
 }
 
 input.form-control {
   border: 1px solid #ECECEC;
   box-shadow: none;
-  font-size: 14px;
+  font-size: 20px !important;
   color: #868686;
   &:focus {
     outline: none;
@@ -86,6 +86,8 @@ input.form-control {
 
 .btn {
   margin-top: 10px;
+  border-radius:13px;
+  font-size:20px;
 }
 
 #end-point-button {
@@ -96,7 +98,7 @@ input.form-control {
 }
 
 #chatinput {
-position: fixed;
- bottom: 80px;
- width: 100%;
+  position: fixed;
+  bottom: 80px;
+  width: 100%;
 }
