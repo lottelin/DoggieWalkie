@@ -4,22 +4,9 @@
      <%= cl_image_tag current_user.dog.photo, alt: "dog photo", class: "avatar", crop: :fill %>
     <% end %>
 
+  <%=image_tag("Doggie_Walkie_Logo.png", alt: "", width: 200,class: "navbar-logo")%>
 
-  <%=image_tag("Doggie_Walkie_Logo.png", alt: "", width: 200)%>
+  <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link" %>
 
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <%= link_to "Map", root_path, class: "nav-link" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link" %>
-        </li>
-      <% end %>
-    </ul>
-  </div>
+     <% end %>
 </div>
