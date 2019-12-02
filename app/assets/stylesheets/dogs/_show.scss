@@ -7,18 +7,43 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   border-radius: 13px;
   margin: 10px;
-  h2 {
-    font-size: 16px;
-    font-weight: bold;
-    margin: 0;
-    display: flex;
-    justify-content: space-around;
-  }
   p {
     font-size: 12px;
     opacity: .7;
     margin: 0;
   }
+
+.background-img {
+  height:160px;
+}
+
+.dog-info h2 {
+  font-size:35px;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+// dog & owner profile photo
+.card-show-user {
+    position: absolute;
+    left: 50%;
+    margin-left: -100px;
+    top: 50%;
+    margin-top: -200px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    border: white 5px solid;
+  }
+  img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
 
 .card-show-infos {
     display: flex;
@@ -28,95 +53,16 @@
     margin-top: 95px;
   }
 
-.card-show-user {
-    position: absolute;
-    left: 50%;
-    margin-left: -100px;
-    top: 50%;
-    margin-top: -230px;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
-    border: white 1px solid;
-  }
-  > img {
-    height: 200px;
-    width: 100%;
-    object-fit: cover;
-  }
+#flip {
+  width: 35px;
+  height: 35px;
+  margin-left: 230px;
+  z-index: 1;
+  position: absolute;
+  margin-top: -40px;
+  border-radius: 50%;
+  background: white;
 }
-
-.owner-links {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding:10px 20px;
-  a {
-  color: black;
-  opacity: 0.15;
-  text-decoration: none;
-  font-size: 24px;
-  padding: 0px 10px;
-}
-a:hover {
-  opacity: 1;
-}
-p {
-font-style: normal;
-font-weight: normal;
-font-size: 14px;
-  }
-}
-
-
-
-
-.purple-card {
-  overflow: hidden;
-  margin: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #F1EAFF;
-  height: 83px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 13px;
-  h3 {
-  justify-content: space-around;
-  font-size: 17px;
-  }
-}
-
-
-
-
-.green-card {
-  overflow: hidden;
-  margin: 10px;
-  align-items: center;
-  background-color: #DFFFF4;
-  height: 100px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 13px;
-  h3 {
-    font-size:20px;
-  }
-}
-
-
-.favorites-card {
-  overflow: hidden;
-  margin: 10px;
-  align-items: center;
-  background-color: #F1EAFF;
-  height: 70px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 13px;
-}
-
-
-
 
 .dog-info {
   font-size: 27px;
@@ -141,6 +87,120 @@ font-size: 14px;
 }
 
 
+// owner links & social media
+.owner-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:10px 20px;
+  a {
+  color: black;
+  text-decoration: none;
+  font-size: 24px;
+  padding: 0px 10px;
+}
+p {
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+  }
+}
+
+.fa-facebook {
+  color: #1877f2;
+}
+
+#insta {
+  width: 25px;
+  height: 25px;
+  margin-bottom: 10px;
+}
+
+
+
+
+
+
+// info
+
+.info-card {
+  background-color: $primary;
+  // background-image: url('../images/back1.png');
+  height: 148px;
+  width: 380px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 13px;
+  margin: 15px 10px 10px 10px;
+  h3 {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 7px 0px 0px 22px;
+
+  }
+}
+
+
+.col-info {
+  background-color: white;
+  border-radius: 13px;
+  height: 110px;
+  width: 380px;
+  padding: 5px 10px 10px 2px;
+  margin: 0;
+  font-size: 17px;
+}
+
+.col-info p {
+  margin-bottom: 0 !important;
+}
+
+
+
+
+
+
+
+
+// activity
+
+.activities {
+  background-color: $primary;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 13px;
+  margin: 15px 10px 10px 10px;
+}
+
+
+.activities-card {
+  overflow: hidden;
+  align-items: center;
+  background-color: white;
+  height: 65px;
+  width: 380px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 13px;
+  font-size: 17px;
+  h3 {
+    font-size:20px;
+  }
+}
+
+.col {
+  padding-top: 7px;
+}
+
+.col p {
+  margin-bottom: 0 !important;
+}
+
+.activities h3 {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 7px 0px 0px 22px;
+}
+
+
+
 
 
 
@@ -155,25 +215,25 @@ font-size: 14px;
   perspective: 1000px;
 
 
-  .image-card {
-    position: relative;
-    cursor: pointer;
-    transition-duration: 0.6s;
-    transition-timing-function: ease-in-out;
-    transform-style: preserve-3d;
+.image-card {
+  position: relative;
+  cursor: pointer;
+  transition-duration: 0.6s;
+  transition-timing-function: ease-in-out;
+  transform-style: preserve-3d;
 
-    .front, .back {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      backface-visibility: hidden;
-      transform: rotateX(0deg);
-    }
+.front, .back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transform: rotateX(0deg);
+  }
 
-    .front {
-      z-index: 2;
+  .front {
+    z-index: 2;
     }
   }
 

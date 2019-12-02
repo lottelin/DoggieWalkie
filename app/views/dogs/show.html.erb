@@ -1,5 +1,5 @@
 <div class="card-show">
-  <img src="https://images.unsplash.com/photo-1436892777614-be9a19edb568?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" />
+  <img src="https://source.unsplash.com/1600x900/?nature,see" class="background-img"/>
   <div class="card-show-infos">
     <div class="profile-image-wrapper flip-right">
       <div class="image-card">
@@ -23,9 +23,9 @@
       </div>
     </div>
 
-
-
-
+    <div>
+      <%= image_tag("flip-image.png", :alt => "flip", :id =>"flip") %>
+    </div>
 
 
     <div class="dog-info">
@@ -43,51 +43,61 @@
       class: 'btn btn-primary chat-btn'
         %>
         <% end %>
-    </div>
+     </div>
+
   </div>
 
 
     <div class="owner-links">
       <p>Proud owner: @<%= @dog.user.full_name %> </p>
       <div class="social-media">
-        <a href="#"><i class="fab fa-instagram"></i></a>
+<!--         <a href="#"><i class="fab fa-instagram"></i></a> -->
+        <%= image_tag("instagram.png", :alt => "insta", :id =>"insta") %>
         <a href="#"><i class="fab fa-facebook"></i></a>
       </div>
     </div>
+
+
+</div>
+
+
+
+
+<!-- purple card & green card -->
+  <div class="info-card">
+    <h3>Info</h3>
+    <div class="col-info">
+      <ul>
+        <li>Breed -  <%= @dog.breed %></li>
+        <li>Age -  <%= @dog.age %></li>
+        <li>Sex - <%= @dog.sex %></li>
+        <li>Find me at <%= @dog.hangouts %></li>
+      </ul>
+    </div>
   </div>
 
 
 
-
-
-
-  <div class="purple-card row">
-    <div class="col">
-      <p>Breed: <%= @dog.breed %></p>
-      <p>Age: <%= @dog.age %></p>
-      <p>Sex: <%= @dog.sex %></p>
-    </div>
-    <div class="col">
-     <p>Find me at: <%= @dog.hangouts %></p>
-    </div>
-  </div>
-
-  <div class="green-card">
-    <h3>Activities</h3>
-      <div class="row">
-        <div class="col">
-          <% @dog.activities[0..1].each do |activity| %>
-          <p><%= activity.name %></p>
-          <% end %>
-        </div>
-        <div class="col">
-          <% @dog.activities[2..3].each do |activity| %>
-          <p><%= activity.name %></p>
-          <% end %>
-        </div>
+<div class="activities">
+  <h3>Activities</h3>
+  <div class="activities-card">
+    <div class="row">
+      <div class="col pr-0">
+        <ul>
+        <% @dog.activities[0..1].each do |activity| %>
+        <li><%= activity.name %></li>
+        <% end %>
+        </ul>
       </div>
-  </div>
 
-  <div class="favorites-card">
-
+      <div class="col pl-0">
+        <ul>
+        <% @dog.activities[2..3].each do |activity| %>
+        <li><%= activity.name %></li>
+        <% end %>
+        </ul>
+      </div>
+    </div>
   </div>
+</div>
+
