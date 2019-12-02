@@ -6,16 +6,13 @@
   </div>
 </div>
 
-<!-- map page -->
-<div class="search-form">
-  <input type="text" placeholder="Search.." class="searchinput">
-</div>
+
 
 <div
   id="map"
   style="width: 100%;
   position: relative;
-  height: 100vh;"
+  height: 80vh;"
   data-markers="<%= @markers.to_json %>"
   data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
 ></div>
