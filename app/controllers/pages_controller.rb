@@ -19,4 +19,7 @@ class PagesController < ApplicationController
     end
   end
 
+  def endpoint
+  end
+
 end
