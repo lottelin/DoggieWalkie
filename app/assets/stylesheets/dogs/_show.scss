@@ -13,6 +13,10 @@
     margin: 0;
   }
 
+.background-img {
+  height:180px;
+}
+
 .dog-info h2 {
   font-size:35px;
   margin: 0;
@@ -53,8 +57,33 @@
   width: 35px;
   height: 35px;
   margin-left: 230px;
+  z-index: 1;
 }
 
+.dog-info {
+  font-size: 27px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  h2 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 27px;
+  }
+}
+
+.chat-btn {
+  margin: 20px auto;
+  border-radius:20px;
+  padding:10px 20px;
+}
+
+.front {
+  object-fit: cover;
+}
+
+
+// owner links & social media
 .owner-links {
   display: flex;
   justify-content: space-between;
@@ -85,64 +114,74 @@ font-size: 16px;
 
 
 
-.purple-card {
-  overflow: hidden;
+
+
+.info-card {
   margin: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #F1EAFF;
-  height: 83px;
+  background-color: #eacdfe;
+  padding-left: 10px;
+  height: 140px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 13px;
+  margin: 15px 10px 10px 10px;
   h3 {
-  justify-content: space-around;
-  font-size: 17px;
+  font-size: 20px;
+  font-weight: bold;
+  padding-left:5px;
   }
 }
 
 
+.col-info {
+  background-color: white;
+  border-radius: 13px;
+  height: 140px;
+  width: 290px;
+  padding: 10px 10px 10px 5px;
+}
+
+.col-info p {
+  margin-bottom: 0 !important;
+}
 
 
-.green-card {
-  overflow: hidden;
-  margin: 10px;
-  align-items: center;
+
+.activity {
   background-color: #DFFFF4;
-  height: 100px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 13px;
+  margin: 15px 10px 10px 10px;
+}
+
+
+
+.activity-card {
+  overflow: hidden;
+  align-items: center;
+  background-color: white;
+  height: 65px;
+  width: 290px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 13px;
+  // padding: 8px 8px 8px 14px;
   h3 {
     font-size:20px;
   }
 }
 
-
-
-
-
-
-.dog-info {
-  font-size: 27px;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  h2 {
-    font-style: normal;
-    font-weight: bold;
-    font-size: 27px;
-  }
+.col p {
+  margin-bottom: 0 !important;
 }
 
-.chat-btn {
-  margin: 20px auto;
-  border-radius:20px;
-  padding:10px 20px;
+.activity h3 {
+  font-size: 20px;
+  font-weight: bold;
+  padding-left:5px;
 }
 
-.front {
-  object-fit: cover;
-}
 
 
 

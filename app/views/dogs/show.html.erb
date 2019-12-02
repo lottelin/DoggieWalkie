@@ -1,5 +1,5 @@
 <div class="card-show">
-  <img src="https://images.unsplash.com/photo-1436892777614-be9a19edb568?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" />
+  <img src="https://source.unsplash.com/1600x900/?nature,see" class="background-img"/>
   <div class="card-show-infos">
     <div class="profile-image-wrapper flip-right">
       <div class="image-card">
@@ -64,33 +64,40 @@
 
 
 <!-- purple card & green card -->
-<div><h5>Information</h5></div>
-  <div class="purple-card row">
-    <div class="col">
-      <p>Breed: <%= @dog.breed %></p>
-      <p>Age: <%= @dog.age %></p>
-      <p>Sex: <%= @dog.sex %></p>
+  <div class="info-card">
+    <h3>Info</h3>
+    <div class="col-info">
+      <ul>
+        <li>Breed -  <%= @dog.breed %></li>
+        <li>Age -  <%= @dog.age %></li>
+        <li>Sex - <%= @dog.sex %></li>
+        <li>Find me at<br> <%= @dog.hangouts %></li>
+      </ul>
     </div>
-
-    <div class="col">
-     <p>Find me at: <%= @dog.hangouts %></p>
-    </div>
-
   </div>
 
-<div><h5>Activities</h5></div>
-  <div class="green-card">
 
-      <div class="row">
-        <div class="col">
-          <% @dog.activities[0..1].each do |activity| %>
-          <p><%= activity.name %></p>
-          <% end %>
-        </div>
-        <div class="col">
-          <% @dog.activities[2..3].each do |activity| %>
-          <p><%= activity.name %></p>
-          <% end %>
-        </div>
+
+<div class="activity">
+  <h3>Activities</h3>
+  <div class="activity-card">
+    <div class="row">
+      <div class="col">
+        <ul>
+        <% @dog.activities[0..1].each do |activity| %>
+        <li><%= activity.name %></li>
+        <% end %>
+        </ul>
       </div>
+
+      <div class="col">
+        <ul>
+        <% @dog.activities[2..3].each do |activity| %>
+        <li><%= activity.name %></li>
+        <% end %>
+        </ul>
+      </div>
+    </div>
   </div>
+</div>
+
