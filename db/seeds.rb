@@ -67,7 +67,6 @@ u11.remote_photo_url = user_image_url
 u11.save!
 
 
-
 dog_image_url = "https://res.cloudinary.com/dlajprtba/image/upload/v1574434880/DoggieWalkie/Tinkerbell.jpg"
 d1 = Dog.create(name:'Tinkerbell', user: u1, breed:'Toy Poodle', sex:'Female', age:'Puppy', hangouts:'Preußen Park')
 d1.remote_photo_url = dog_image_url
