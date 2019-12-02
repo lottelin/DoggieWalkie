@@ -56,7 +56,8 @@ u9.save!
 
 user_image_url = "https://res.cloudinary.com/dlajprtba/image/upload/v1574806894/DoggieWalkie/owner/Giselle_Hobosh_as9zuz.png"
 
-u10 = User.create(full_name: 'Giselle Hobosh', address: 'Fehrbelliner Str. 71, Berlin', email: 'giselle@example.com', password: '123456', password_confirmation: '123456')
+
+u10 = User.create(full_name: 'Giselle Hobosh', address: 'Fehrbelliner Str. 25, Berlin', email: 'giselle@example.com', password: '123456', password_confirmation: '123456')
 u10.remote_photo_url = user_image_url
 u10.save!
 
@@ -103,12 +104,12 @@ d7.remote_photo_url = dog_image_url
 d7.save!
 
 dog_image_url = "https://res.cloudinary.com/dlajprtba/image/upload/v1574785873/DoggieWalkie/Santi_GreyPuli_mflmjq.jpg"
-d8 = Dog.create(name:'Santi', user: u8, breed:'Puli', sex:'Male', age:'Puppy', hangouts:'')
+d8 = Dog.create(name:'Santi', user: u8, breed:'Puli', sex:'Male', age:'Puppy', hangouts:'Gorlitzer Park')
 d8.remote_photo_url = dog_image_url
 d8.save!
 
 dog_image_url = "https://res.cloudinary.com/dlajprtba/image/upload/v1574785436/DoggieWalkie/Toni_Shiba_gezc4l.png"
-d9 = Dog.create(name:'Toni', user: u9, breed:'', sex:'Female', age:'Puppy', hangouts:'Volkspark Friedrichshain')
+d9 = Dog.create(name:'Toni', user: u9, breed:'Shiba', sex:'Female', age:'Puppy', hangouts:'Volkspark Friedrichshain')
 d9.remote_photo_url = dog_image_url
 d9.save!
 
@@ -136,17 +137,19 @@ Activity6 = Activity.create(name:'Swimming')
 DogActivity.create(dog_id: d1.id, activity_id: Activity1.id)
 DogActivity.create(dog_id: d1.id, activity_id: Activity3.id)
 DogActivity.create(dog_id: d1.id, activity_id: Activity5.id)
-DogActivity.create(dog_id: d1.id, activity_id: Activity3.id)
+DogActivity.create(dog_id: d1.id, activity_id: Activity2.id)
+
 
 DogActivity.create(dog_id: d2.id, activity_id: Activity2.id)
 DogActivity.create(dog_id: d2.id, activity_id: Activity4.id)
 DogActivity.create(dog_id: d2.id, activity_id: Activity5.id)
 DogActivity.create(dog_id: d2.id, activity_id: Activity3.id)
 
+
 DogActivity.create(dog_id: d3.id, activity_id: Activity1.id)
 DogActivity.create(dog_id: d3.id, activity_id: Activity3.id)
 DogActivity.create(dog_id: d3.id, activity_id: Activity5.id)
-DogActivity.create(dog_id: d3.id, activity_id: Activity3.id)
+DogActivity.create(dog_id: d3.id, activity_id: Activity4.id)
 
 DogActivity.create(dog_id: d4.id, activity_id: Activity2.id)
 DogActivity.create(dog_id: d4.id, activity_id: Activity4.id)
@@ -156,7 +159,7 @@ DogActivity.create(dog_id: d4.id, activity_id: Activity3.id)
 DogActivity.create(dog_id: d5.id, activity_id: Activity1.id)
 DogActivity.create(dog_id: d5.id, activity_id: Activity3.id)
 DogActivity.create(dog_id: d5.id, activity_id: Activity5.id)
-DogActivity.create(dog_id: d5.id, activity_id: Activity3.id)
+DogActivity.create(dog_id: d5.id, activity_id: Activity4.id)
 
 DogActivity.create(dog_id: d6.id, activity_id: Activity2.id)
 DogActivity.create(dog_id: d6.id, activity_id: Activity4.id)
@@ -166,7 +169,7 @@ DogActivity.create(dog_id: d6.id, activity_id: Activity3.id)
 DogActivity.create(dog_id: d7.id, activity_id: Activity1.id)
 DogActivity.create(dog_id: d7.id, activity_id: Activity3.id)
 DogActivity.create(dog_id: d7.id, activity_id: Activity5.id)
-DogActivity.create(dog_id: d7.id, activity_id: Activity3.id)
+DogActivity.create(dog_id: d7.id, activity_id: Activity2.id)
 
 DogActivity.create(dog_id: d8.id, activity_id: Activity2.id)
 DogActivity.create(dog_id: d8.id, activity_id: Activity4.id)
@@ -183,9 +186,10 @@ DogActivity.create(dog_id: d10.id, activity_id: Activity4.id)
 DogActivity.create(dog_id: d10.id, activity_id: Activity2.id)
 DogActivity.create(dog_id: d10.id, activity_id: Activity3.id)
 
-DogActivity.create(dog_id: d10.id, activity_id: Activity1.id)
-DogActivity.create(dog_id: d10.id, activity_id: Activity3.id)
-DogActivity.create(dog_id: d10.id, activity_id: Activity5.id)
-DogActivity.create(dog_id: d10.id, activity_id: Activity3.id)
+DogActivity.create(dog_id: d11.id, activity_id: Activity1.id)
+DogActivity.create(dog_id: d11.id, activity_id: Activity3.id)
+DogActivity.create(dog_id: d11.id, activity_id: Activity5.id)
+DogActivity.create(dog_id: d11.id, activity_id: Activity2.id)
+
 
 puts 'Activities are done'

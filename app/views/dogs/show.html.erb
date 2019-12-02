@@ -1,58 +1,93 @@
 <div class="card-show">
-  <img src="#" />
+  <img src="https://images.unsplash.com/photo-1436892777614-be9a19edb568?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" />
   <div class="card-show-infos">
-    <% if @dog.photo.present? %>
-    <%= cl_image_tag @dog.photo, alt: "dog photo", class: "card-show-user" %>
-    <% else %>
-    <%= image_tag "#", alt: "dog", class: "card-show-user" %>
-    <% end %>
+    <div class="profile-image-wrapper flip-right">
+      <div class="image-card">
+        <div class="front">
+            <% if @dog.photo.present? %>
+            <%= cl_image_tag @dog.photo, alt: "dog photo", class: "card-show-user" %>
+
+            <% else %>
+            <%= image_tag "#", alt: "dog", class: "card-show-user" %>
+            <% end %>
+        </div>
+
+        <div class="back">
+          <% if @user.photo.present? %>
+            <%= cl_image_tag @dog.user.photo, alt: "user photo", class: "card-show-user" %>
+            <% else %>
+            <%= image_tag "#", alt: "user", class: "card-show-user" %>
+            <% end %>
+        </div>
+
+      </div>
+    </div>
+
+
+
+
+
+
     <div class="dog-info">
       <h2><%= @dog.name %></h2>
       <% if @chat_room %>
-      <%= link_to "Let's Talk!", chat_room_path(@chat_room), class: 'btn btn-primary'  %>
+      <%= link_to "Let's Chat!", chat_room_path(@chat_room), class: 'btn btn-primary chat-btn'  %>
       <% else %>
-      <%= link_to "Let's Talk!",
+      <%= link_to "Let's Chat!",
       chat_rooms_path(
         @chat_room,
         sender_id: current_user.id,
         receiver_id: @dog_owner.id
         ),
       method: :post,
-      class: 'btn btn-primary'
+      class: 'btn btn-primary chat-btn'
         %>
         <% end %>
-      </div>
-    </div>
-    <div class="owner-links">
-      <p>Proud owner: @<%= @dog.user.full_name %> </p>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-facebook"></i></a>
     </div>
   </div>
+
+
+    <div class="owner-links">
+      <p>Proud owner: @<%= @dog.user.full_name %> </p>
+      <div class="social-media">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
 
   <div class="purple-card row">
     <div class="col">
       <p>Breed: <%= @dog.breed %></p>
       <p>Age: <%= @dog.age %></p>
-      <!-- <p>Sex: <%#= @dog.sex %></p> -->
+      <p>Sex: <%= @dog.sex %></p>
     </div>
     <div class="col">
      <p>Find me at: <%= @dog.hangouts %></p>
-   </div>
- </div>
-
- <div class="green-card">
-  <h3>Activities: </h3>
-  <div class="row">
-    <div class="col">
-      <% @dog.activities[0..1].each do |activity| %>
-      <p><%= activity.name %></p>
-      <% end %>
-    </div>
-    <div class="col">
-      <% @dog.activities[2..3].each do |activity| %>
-      <p><%= activity.name %></p>
-      <% end %>
     </div>
   </div>
-</div>
+
+  <div class="green-card">
+    <h3>Activities</h3>
+      <div class="row">
+        <div class="col">
+          <% @dog.activities[0..1].each do |activity| %>
+          <p><%= activity.name %></p>
+          <% end %>
+        </div>
+        <div class="col">
+          <% @dog.activities[2..3].each do |activity| %>
+          <p><%= activity.name %></p>
+          <% end %>
+        </div>
+      </div>
+  </div>
+
+  <div class="favorites-card">
+
+  </div>
