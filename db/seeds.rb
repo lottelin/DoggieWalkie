@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Message.destroy_all
 User.destroy_all
 Dog.destroy_all
 
@@ -56,6 +57,7 @@ u9.save!
 
 user_image_url = "https://res.cloudinary.com/dlajprtba/image/upload/v1574806894/DoggieWalkie/owner/Giselle_Hobosh_as9zuz.png"
 
+
 u10 = User.create(full_name: 'Giselle Hobosh', address: 'Fehrbelliner Str. 25, Berlin', email: 'giselle@example.com', password: '123456', password_confirmation: '123456')
 u10.remote_photo_url = user_image_url
 u10.save!
@@ -64,7 +66,6 @@ user_image_url = "https://res.cloudinary.com/dlajprtba/image/upload/v1574850880/
 u11 = User.create(full_name: 'Gordana Macura', address: 'Rheinsberger Str. 76, Berlin', email: 'me@example.com', password: '123456', password_confirmation: '123456')
 u11.remote_photo_url = user_image_url
 u11.save!
-
 
 
 dog_image_url = "https://res.cloudinary.com/dlajprtba/image/upload/v1574434880/DoggieWalkie/Tinkerbell.jpg"
