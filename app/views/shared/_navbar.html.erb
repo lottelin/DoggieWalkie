@@ -1,12 +1,12 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-   <% if user_signed_in? %>
+<% if user_signed_in? %>
+  <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+
     <%= link_to dog_path(current_user.dog), class: "navbar-brand" do %>
-     <%= cl_image_tag current_user.dog.photo, alt: "dog photo", class: "avatar", crop: :fill %>
+      <%= cl_image_tag current_user.dog.photo, alt: "dog photo", class: "avatar", crop: :fill %>
     <% end %>
 
-  <%=image_tag("Doggie_Walkie_Logo.png", alt: "", width: 200,class: "navbar-logo")%>
+    <%=image_tag("Doggie_Walkie_Logo.png", alt: "", width: 200,class: "navbar-logo")%>
 
-  <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link" %>
-
-     <% end %>
-</div>
+    <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link" %>
+  </div>
+<% end %>
