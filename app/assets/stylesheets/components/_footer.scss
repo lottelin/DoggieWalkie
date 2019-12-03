@@ -1,14 +1,23 @@
 .footer {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-around;
   height: 50px;
   padding: 0px;
   color: rgba(0,0,0,0.3);
   border-top: 1px solid #e8eaed;
+  margin-top: auto;
+  z-index: 1;
+  position: absolute;
+ bottom: 0;
+ width: 100%;
 }
 
 .icons-navbar {
   font-size: 30px;
   padding: 0px 10px;
+}
+
+.fas {
+  color: $gray;
 }

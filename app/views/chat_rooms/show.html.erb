@@ -9,6 +9,7 @@
             message.user == current_user %>
           <% end %>
         </div>
+        <div id="chatinput">
         <div id="create-message">
           <%= simple_form_for [ @chat_room, Message.new ], remote: true do |f| %>
             <%= f.input :content, label: false %>
@@ -22,6 +23,7 @@
             </div>
           <% end %>
         <% end %>
+        </div>
     </div>
   </div>
 </div>
