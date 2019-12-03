@@ -1,3 +1,5 @@
+// confetti
+
 body {
   margin: 0;
   overflow: hidden;
@@ -6,21 +8,22 @@ body {
 .wrapper {
   position: relative;
   min-height: 100vh;
+  // z-index: -1;
 }
 
 [class|="confetti"] {
   position: absolute;
 }
 
-$colors: (#73FFCD, #ffbf00, #263672);
+$colors: (#73FFCD, #ffbf00, #263672, #e362ad);
 
 @for $i from 0 through 150 {
   $w: random(8);
   $l: random(100);
   .confetti-#{$i} {
     width: #{$w}px;
-    height: #{$w*0.9}px;
-    background-color: nth($colors, random(3));
+    height: #{$w*0.95}px;
+    background-color: nth($colors, random(4));
     top: -10%;
     left: unquote($l+"%");
     opacity: random() + 0.5;
@@ -35,4 +38,35 @@ $colors: (#73FFCD, #ffbf00, #263672);
     }
   }
 }
+
+// doghead
+.signin-doghead {
+  z-index: 1;
+  width: 160px;
+  margin-left: 20px;
+  margin-top: 90px;
+  margin-bottom: 20px;
+  animation: shake 3s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  animation-iteration-count:infinite;
+}
+
+@keyframes shake {
+  6%, 14% {
+   transform: rotate(-4deg);
+  }
+
+  10%, 18% {
+  transform:  rotate(4deg);
+  }
+}
+
+.endinghead {
+  z-index: 100;
+  position: absolute;
+  top: 150px;
+  left: 93px;
+}
+
+
 
