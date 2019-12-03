@@ -1,7 +1,3 @@
-
-
-
-
 .card-show {
   display: flex;
   overflow: hidden;
@@ -18,7 +14,10 @@
   }
 
 .background-img {
-  height:160px;
+  height:180px;
+  i {
+    padding: 15px;
+  }
 }
 
 .dog-info h2 {

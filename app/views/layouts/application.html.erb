@@ -12,8 +12,10 @@
   <%= favicon_link_tag 'logo_doghead.png' %>
 </head>
 <body>
-  <% unless (controller_name == "dogs" && action_name == "show") && user_signed_in? %>
-    <%= render 'shared/navbar' %>
+  <% unless (controller_name == "dogs" && action_name == "show") %>
+    <% if user_signed_in? %>
+      <%= render 'shared/navbar' %>
+    <% end %>
   <% end %>
   <!-- This is for login flashes -->
   <%#= render 'shared/flashes' %>
