@@ -2,7 +2,9 @@ class Message < ApplicationRecord
   belongs_to :chat_room
   belongs_to :sender, class_name: "User"
   belongs_to :receiver, class_name: "User"
+
   validates :content, presence: true, allow_blank: false
+  # after_create :broadcast_message
 
   def self.first_between(user_a, user_b)
     self.where(

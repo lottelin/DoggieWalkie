@@ -20,8 +20,9 @@
   <%= yield %>
   <% if user_signed_in? %>
     <%= render 'shared/footer' %>
-  <% end %>
-  <%= javascript_include_tag 'application' %>
-  <%= javascript_pack_tag 'application' %>
-</body>
+   <% end %>
+    <%= javascript_include_tag 'application' %>
+    <%= yield :after_js%>
+    <%= javascript_pack_tag 'application' %>
+  </body>
 </html>
