@@ -10,9 +10,10 @@
   border: 1px solid #ececec;
   border-top: none;
   border-bottom-width: 0;
-  // max-height: calc(100vh - 70px - 45px - 61px - 30px);
   overflow: scroll;
   border-style: none;
+  height: 70vh;
+  margin-bottom: 40px;
 }
 
 // navbar 70px
@@ -95,6 +96,6 @@ input.form-control {
 
 #chatinput {
   position: fixed;
-  bottom: 80px;
+  bottom: 50px;
   width: 100%;
 }
