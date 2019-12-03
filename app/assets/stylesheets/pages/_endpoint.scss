@@ -26,7 +26,7 @@ $colors: (#73FFCD, #ffbf00, #263672, #e362ad);
     background-color: nth($colors, random(4));
     top: -10%;
     left: unquote($l+"%");
-    opacity: random() + 0.5;
+    opacity: random() + 1;
     transform: rotate(#{random()*360}deg);
     animation: drop-#{$i} unquote(4+random()+"s") unquote(random()+"s") infinite;
   }
@@ -69,4 +69,7 @@ $colors: (#73FFCD, #ffbf00, #263672, #e362ad);
 }
 
 
+.endinghead h2 {
+  font-weight: bold;
+}
 
