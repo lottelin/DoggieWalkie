@@ -4,18 +4,9 @@ class MessagesController < ApplicationController
     @chat_room = ChatRoom.find(params[:chat_room_id])
     @message.chat_room = @chat_room
     @message.sender = current_user
-    @receiver = User.find_by(params[:receiver_id])
-    @message.receiver = @receiver
-    if @message.save!
-      respond_to do |format|
-        format.html { redirect_to chat_room_path(@chat_room) }
-        format.js
-      end
-    else
-      respond_to do |format|
-        format.html { render "chat_rooms/show" }
-        format.js
-      end
+    @message.receiver = @chat_room.messages.last.receiver
+    if @message.save
+      broadcast_message
     end
   end
 
@@ -23,5 +14,18 @@ class MessagesController < ApplicationController
 
   def message_params
     params.require(:message).permit(:content)
+  end
+
+
+  def broadcast_message
+    ActionCable.server.broadcast("chat_room_#{@chat_room.id}", {
+      message_partial: ApplicationController.renderer.render(
+        partial: "messages/message",
+        locals: {
+          message: @message,
+          user_is_message_sender: true
+        }),
+        sender_id: @message.sender.id
+    })
   end
 end

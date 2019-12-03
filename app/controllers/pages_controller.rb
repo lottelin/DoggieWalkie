@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  # before_action :authenticate_user!
+  before_action :authenticate_user!
   # Uncomment in production later on
 
   def home
@@ -17,6 +17,9 @@ class PagesController < ApplicationController
         # image_url: user.dog.photo_url
       }
     end
+  end
+
+  def endpoint
   end
 
 end
