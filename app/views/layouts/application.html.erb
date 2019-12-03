@@ -18,9 +18,7 @@
     <!-- This is for login flashes -->
     <%#= render 'shared/flashes' %>
     <%= yield %>
-    <% unless action_name == "endpoint" %>
     <%= render 'shared/footer' %>
-    <% end %>
     <%= javascript_include_tag 'application' %>
     <%= yield :after_js%>
     <%= javascript_pack_tag 'application' %>
