@@ -23,14 +23,10 @@
               <%= f.submit 'send', class: 'btn btn-primary', id: 'send-btn' %>
             <% end %>
           </div>
-          <% @chat_room.messages.each do |message| %>
-            <% if message.content.downcase.include?("bye") %>
-              <div id="end-point-button">
-                <%= link_to 'Ready, Set, DoggieWalk! 🎉', endpoint_path, :class => "btn btn-primary btn-block"%>
-              </div>
-            <% end %>
-          <% end %>
+          <div id="end-point-button">
+            <%= link_to 'Ready, Set, DoggieWalk! 🎉', endpoint_path, :class => "btn btn-primary"%>
           </div>
+        </div>
       </div>
     </div>
   </div>

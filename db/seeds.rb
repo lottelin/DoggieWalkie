@@ -63,7 +63,7 @@ u10.remote_photo_url = user_image_url
 u10.save!
 
 user_image_url = "https://res.cloudinary.com/dlajprtba/image/upload/v1574850880/DoggieWalkie/owner/Gordana_kkujn0.png"
-u11 = User.create(full_name: 'Gordana Macura', address: 'Rheinsberger Str. 76, Berlin', email: 'me@example.com', password: '123456', password_confirmation: '123456')
+u11 = User.create(full_name: 'Gordana Macura', address: 'Rheinsberger Str. 70, Berlin', email: 'me@example.com', password: '123456', password_confirmation: '123456')
 u11.remote_photo_url = user_image_url
 u11.save!
 
@@ -79,7 +79,7 @@ d2.remote_photo_url = dog_image_url
 d2.save!
 
 dog_image_url = "https://res.cloudinary.com/dlajprtba/image/upload/v1574785092/DoggieWalkie/Anthony_Boo_azyf9j.jpg"
-d3 = Dog.create(name:'Anthony', user: u3, breed:'Boo', sex:'Male', age:'teen', hangouts:'Maurpark')
+d3 = Dog.create(name:'Anthony', user: u3, breed:'Pommeranian', sex:'Male', age:'Teen', hangouts:'Maurpark')
 d3.remote_photo_url = dog_image_url
 d3.save!
 
@@ -119,7 +119,7 @@ d10.remote_photo_url = dog_image_url
 d10.save!
 
 dog_image_url = "https://res.cloudinary.com/dlajprtba/image/upload/v1574851209/DoggieWalkie/Bubzi_Prague_ratter_osgdzq.png"
-d11 = Dog.create(name:'Bubzi', user: u11, breed:'Prague Ratter', sex:'Male', age:'Teen', hangouts:'Hundewiese Tempelhofer Feld')
+d11 = Dog.create(name:'Bubzi', user: u11, breed:'Prague Ratter', sex:'Male', age:'Teen', hangouts:'Hundewiese Tempelhof')
 d11.remote_photo_url = dog_image_url
 d11.save!
 

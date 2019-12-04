@@ -5,11 +5,16 @@ import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
 const mapElement = document.getElementById('map');
 
 const buildMap = () => {
-    mapboxgl.accessToken = mapElement.dataset.mapboxApiKey;
-    return new mapboxgl.Map({
-        container: 'map',
-        style: 'mapbox://styles/mapbox/streets-v10'
-    });
+
+  mapboxgl.accessToken = mapElement.dataset.mapboxApiKey;
+  return new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v10',
+    transition: {
+      duration: 0,
+    }
+  });
+
 };
 
 const addMarkersToMap = (map, markers) => {
@@ -87,8 +92,9 @@ const initMapbox = () => {
             function animateMarker(timestamp) {
                 // Update the data to a new position based on the animation timestamp. The
                 // divisor in the expression `timestamp / 1000` controls the animation speed.
-                                                                        //speed inverse corelation
-                map.getSource('point').setData(pointOnLine(timestamp / 10000000));
+                 if (map.getSource('point')) {
+                  map.getSource('point').setData(pointOnLine(timestamp / 10000000));
+                 }                                                       //speed inverse corelation
 
                 // Request the next frame of the animation.
                 requestAnimationFrame(animateMarker);
