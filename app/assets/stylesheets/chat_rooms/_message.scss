@@ -87,10 +87,9 @@ input.form-control {
 }
 
 #end-point-button {
-  position:relative;
-  margin: 10px;
-  text-align: left;
-  border-radius:13px;
+  display: flex;
+  justify-content: space-around;
+  width: 92%;
 }
 
 #chatinput {
