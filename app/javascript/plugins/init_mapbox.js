@@ -70,7 +70,7 @@ const initMapbox = () => {
             mapboxgl: mapboxgl
         }));
         map.on('load', function() {
-            map.loadImage("../../assets/logo.png", function(error, image) {
+            map.loadImage("https://res.cloudinary.com/dlajprtba/image/upload/v1575460865/DoggieWalkie/logo_fetjdm.png", function(error, image) {
                 if (error) throw error;
                 map.addImage('logo', image);
                 map.addSource('point', {
@@ -86,7 +86,7 @@ const initMapbox = () => {
                         "icon-image": "logo",
                         "icon-allow-overlap": true,
                         "icon-ignore-placement": true,
-                        "icon-size": 0.045
+                        "icon-size": 0.06
                     }
                 });
                 animateMarker(0);
