@@ -5,11 +5,16 @@ import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
 const mapElement = document.getElementById('map');
 
 const buildMap = () => {
-    mapboxgl.accessToken = mapElement.dataset.mapboxApiKey;
-    return new mapboxgl.Map({
-        container: 'map',
-        style: 'mapbox://styles/mapbox/streets-v10'
-    });
+
+  mapboxgl.accessToken = mapElement.dataset.mapboxApiKey;
+  return new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v10',
+    transition: {
+      duration: 0,
+    }
+  });
+
 };
 
 const addMarkersToMap = (map, markers) => {
