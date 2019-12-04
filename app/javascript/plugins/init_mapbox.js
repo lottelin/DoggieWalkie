@@ -86,7 +86,7 @@ const initMapbox = () => {
                         "icon-image": "logo",
                         "icon-allow-overlap": true,
                         "icon-ignore-placement": true,
-                        "icon-size": 0.045
+                        "icon-size": 0.06
                     }
                 });
                 animateMarker(0);
