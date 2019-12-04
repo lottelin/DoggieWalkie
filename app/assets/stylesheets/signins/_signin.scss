@@ -27,7 +27,7 @@
 .signin-doghead {
   width: 160px;
   margin-left: 20px;
-  margin-top: 90px;
+  margin-top: 55px;
   margin-bottom: 20px;
   animation: shake 3s cubic-bezier(.36,.07,.19,.97) both;
   transform: translate3d(0, 0, 0);
@@ -47,6 +47,7 @@
 .signin-logo-text img {
   width: 202px;
   margin-top: 5px;
+  margin-bottom: 35px;
 }
 
 .form-inputs {
@@ -57,6 +58,10 @@
 .form-actions {
   display: flex;
   justify-content: center;
+}
+
+.form-check-label {
+  font-size: 18px;
 }
 
 .signin body {
@@ -71,7 +76,6 @@
   border-radius: 26px;
   color: black;
   font-size: 18px;
-  margin-left: 14px;
 }
 
 .sign-up {
