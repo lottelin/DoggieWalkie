@@ -12,7 +12,7 @@
   border-bottom-width: 0;
   overflow: scroll;
   border-style: none;
-  height: 70vh;
+  height: 60vh;
   margin-bottom: 40px;
 }
 
@@ -42,7 +42,6 @@
 }
 
 #create-message {
-  padding: 10px;
   background-color: #ffffff;
   margin-bottom: 10px;
   border: 1px solid #ececec;
@@ -67,7 +66,7 @@ input.form-control {
 }
 
 .form-control {
-  width: 356px;
+  width: 72vw;
 }
 
 
@@ -82,16 +81,16 @@ input.form-control {
 }
 
 #send-btn {
-  margin-top: 10px;
-  border-radius:13px;
-  font-size:20px;
+  height: 62px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 #end-point-button {
   position:relative;
   margin: 10px;
-  text-align: center;
-
+  text-align: left;
+  border-radius:13px;
 }
 
 #chatinput {

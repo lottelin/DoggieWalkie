@@ -1,8 +1,11 @@
 import mapboxgl from 'mapbox-gl';
+import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
+
 
 const mapElement = document.getElementById('map');
 
 const buildMap = () => {
+
   mapboxgl.accessToken = mapElement.dataset.mapboxApiKey;
   return new mapboxgl.Map({
     container: 'map',
@@ -11,87 +14,96 @@ const buildMap = () => {
       duration: 0,
     }
   });
+
 };
 
 const addMarkersToMap = (map, markers) => {
-  markers.forEach((marker) => {
-    const popup = new mapboxgl.Popup().setHTML(marker.infoWindow);
+    markers.forEach((marker) => {
+        const popup = new mapboxgl.Popup().setHTML(marker.infoWindow);
 
-    const element = document.createElement('div');
-    element.className = 'marker';
-    element.style.backgroundImage = `url('${marker.image_url}')`;
-    element.style.backgroundSize = 'contain';
-    element.style.width = '25px';
-    element.style.height = '22px';
+        const element = document.createElement('div');
+        element.className = 'marker';
+        element.style.backgroundImage = `url('${marker.image_url}')`;
+        element.style.backgroundSize = 'contain';
+        element.style.width = '25px';
+        element.style.height = '22px';
 
-    new mapboxgl.Marker(element)
-      .setLngLat([ marker.lng, marker.lat ])
-      .setPopup(popup)
-      .addTo(map);
-  });
+        new mapboxgl.Marker(element)
+            .setLngLat([marker.lng, marker.lat])
+            .setPopup(popup)
+            .addTo(map);
+    });
 };
 
 const fitMapToMarkers = (map, markers) => {
-  const bounds = new mapboxgl.LngLatBounds();
-  markers.forEach(marker => bounds.extend([ marker.lng, marker.lat ]));
-  map.fitBounds(bounds, { padding: 70, maxZoom: 15 });
+    const bounds = new mapboxgl.LngLatBounds();
+    markers.forEach(marker => bounds.extend([marker.lng, marker.lat]));
+    map.fitBounds(bounds, { padding: 70, maxZoom: 15 });
 };
 
 var radius = 20;
 
-function pointOnCircle(angle) {
-return {
-"type": "Point",
-"coordinates": [
-angle,
-angle + 1
-]
-};
+function pointOnLine(angle) {
+    return {
+        "type": "Point",
+        "coordinates": [
+            13.385096,
+            52.542409 + angle
+        ]
+    };
 }
+
+// comment to repush code to github
 
 const initMapbox = () => {
-  if (mapElement) {
-    const map = buildMap();
-    const markers = JSON.parse(mapElement.dataset.markers);
-    addMarkersToMap(map, markers);
-    fitMapToMarkers(map, markers);
-    map.on('load', function () {
-      map.loadImage('data:image/jpeg;base64,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', function(error, image) {
-if (error) throw error;
-map.addImage('cat', image);
-map.addSource('point', {
-"type": "geojson",
-"data": pointOnCircle(0)
-});
+    if (mapElement) {
+        const map = buildMap();
+        const markers = JSON.parse(mapElement.dataset.markers);
+        addMarkersToMap(map, markers);
+        fitMapToMarkers(map, markers);
+        map.addControl(new MapboxGeocoder({
+            accessToken: mapboxgl.accessToken,
+            mapboxgl: mapboxgl
+        }));
+        map.on('load', function() {
+            map.loadImage("../../assets/logo.png", function(error, image) {
+                if (error) throw error;
+                map.addImage('logo', image);
+                map.addSource('point', {
+                    "type": "geojson",
+                    "data": pointOnLine(0)
+                });
 
-map.addLayer({
-"id": "point",
-"source": "point",
-"type": "symbol",
-"layout": {
-"icon-image": "cat",
-"icon-allow-overlap": true,
-"icon-ignore-placement": true,
-"icon-size": 0.25
-}
-});
-animateMarker(0);
-});
-// Add a source and layer displaying a point which will be animated in a circle.
+                map.addLayer({
+                    "id": "point",
+                    "source": "point",
+                    "type": "symbol",
+                    "layout": {
+                        "icon-image": "logo",
+                        "icon-allow-overlap": true,
+                        "icon-ignore-placement": true,
+                        "icon-size": 0.045
+                    }
+                });
+                animateMarker(0);
+            });
+            // Add a source and layer displaying a point which will be animated in a circle.
 
-function animateMarker(timestamp) {
-// Update the data to a new position based on the animation timestamp. The
-// divisor in the expression `timestamp / 1000` controls the animation speed.
-map.getSource('point').setData(pointOnCircle(timestamp / 1000));
+            function animateMarker(timestamp) {
+                // Update the data to a new position based on the animation timestamp. The
+                // divisor in the expression `timestamp / 1000` controls the animation speed.
+                 if (map.getSource('point')) {
+                  map.getSource('point').setData(pointOnLine(timestamp / 10000000));
+                 }                                                       //speed inverse corelation
 
-// Request the next frame of the animation.
-requestAnimationFrame(animateMarker);
-}
+                // Request the next frame of the animation.
+                requestAnimationFrame(animateMarker);
+            }
 
-// Start the animation.
-animateMarker(0);
-});
-  }
+            // Start the animation.
+            animateMarker(0);
+        });
+    }
 };
 
 export { initMapbox };

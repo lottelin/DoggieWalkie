@@ -1,9 +1,22 @@
 .signin {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
   height: 80vh;
+}
+
+#sign-up {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 189px;
+  height: 42px;
+  background: #73FFCD;
+  box-sizing: border-box;
+  border-radius: 26px;
+  color: black;
+  font-size: 18px;
 }
 
 .signinheader {
@@ -66,18 +79,7 @@
   color: $gray;
 }
 
-#sign-up {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 189px;
-  height: 42px;
-  background: #73FFCD;
-  box-sizing: border-box;
-  border-radius: 26px;
-  color: black;
-  font-size: 18px;
-}
+
 
 .sign-up p {
   margin-top: 1rem;
