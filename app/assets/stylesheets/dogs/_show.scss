@@ -14,7 +14,7 @@
   }
 
 .background-img {
-  height:180px;
+  height:160px;
   i {
     padding: 15px;
   }
@@ -22,6 +22,7 @@
 
 .dog-info h2 {
   font-size:35px;
+  letter-spacing: 2px;
   margin: 0;
   display: flex;
   justify-content: space-around;
@@ -81,6 +82,7 @@
 
 .chat-btn {
   margin: 20px auto;
+  margin-top: 40px;
   border-radius:20px;
   padding:10px 20px;
 }
@@ -129,7 +131,7 @@ font-size: 16px;
 .info-card {
   // background-color: $primary;
   background: rgb(115,255,205);
-background: linear-gradient(90deg, rgba(115,255,205,1) 14%, rgba(0,212,255,1) 85%);
+  background: linear-gradient(90deg, rgba(115,255,205,1) 14%, rgba(0,212,255,1) 85%);
   height: 148px;
   width: 355px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -139,7 +141,7 @@ background: linear-gradient(90deg, rgba(115,255,205,1) 14%, rgba(0,212,255,1) 85
   font-size: 20px;
   font-weight: bold;
   padding: 7px 0px 0px 22px;
-
+  letter-spacing: 2px;
   }
 }
 
@@ -203,6 +205,7 @@ background: linear-gradient(90deg, rgba(115,255,205,1) 14%, rgba(0,212,255,1) 85
   font-size: 20px;
   font-weight: bold;
   padding: 7px 0px 0px 22px;
+  letter-spacing: 2px;
 }
 
 
