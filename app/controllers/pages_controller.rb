@@ -9,7 +9,7 @@ class PagesController < ApplicationController
 
     @markers = @users.map do |user|
       if user == current_user
-        dog_image = helpers.asset_url('crown_dog.png')
+        dog_image = helpers.asset_url('dog_crown.png')
       else
         dog_image = helpers.asset_url('logo.png')
       end

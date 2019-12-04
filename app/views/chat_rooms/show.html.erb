@@ -1,26 +1,37 @@
-<div class="chat_room">
-  <div class="row chat_room">
-    <div class="col-sm-6 col-sm-offset-3">
-      <div class="chat-header"><%= @chat_room.messages.first.receiver.dog.name %> and <%= @chat_room.messages.first.sender.dog.name %> are chatting...
-      </div>
-        <div class="messages">
+<div class="container">
+  <div class="chat_room">
+    <div class="row chat_room">
+      <div class="col-sm-6 col-sm-offset-3">
+        <div class="chat-header"><%= @chat_room.messages.first.receiver.dog.name %> and <%= @chat_room.messages.first.sender.dog.name %> are chatting...
+        </div>
+          <div class="messages">
+            <% @chat_room.messages.each do |message| %>
+              <%= render "messages/message",
+                  message: message,
+                  user_is_message_sender: current_user == message.sender %>
+            <% end %>
+          </div>
+          <div id="chatinput">
+          <div id="create-message">
+            <%= simple_form_for [ @chat_room, Message.new ], remote: true,
+              wrapper: :inline_form,
+              html: { class: "form-inline mb-4" },
+              wrapper_mappings: {
+                boolean: :inline_boolean
+              } do |f| %>
+              <%= f.input :content, label: false %>
+              <%= f.submit 'send', class: 'btn btn-primary', id: 'send-btn' %>
+            <% end %>
+          </div>
           <% @chat_room.messages.each do |message| %>
-            <%= render "messages/message",
-                message: message,
-                user_is_message_sender: current_user == message.sender %>
+            <% if message.content.downcase.include?("bye") %>
+              <div id="end-point-button">
+                <%= link_to 'Ready, Set, DoggieWalk! 🎉', endpoint_path, :class => "btn btn-primary"%>
+              </div>
+            <% end %>
           <% end %>
-        </div>
-        <div id="chatinput">
-        <div id="create-message">
-          <%= simple_form_for [ @chat_room, Message.new ], remote: true do |f| %>
-            <%= f.input :content, label: false %>
-            <%= f.submit 'send', class: 'btn btn-primary', id: 'send-btn' %>
-          <% end %>
-        </div>
-            <div id="end-point-button">
-              <%= link_to 'Ready, Set, DoggieWalk! 🎉', endpoint_path, :class => "btn btn-primary"%>
-            </div>
-        </div>
+          </div>
+      </div>
     </div>
   </div>
 </div>

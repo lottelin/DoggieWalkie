@@ -1,39 +1,34 @@
-<div class="card-show">
-
-  <div class="background-img" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/1600x900/?nature,see)">
-  <%= link_to destroy_user_session_path, method: :delete do %>
+<div class="container p-0">
+  <div class="card-show">
+    <div class="background-img" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/1600x900/?nature,see)">
+      <%= link_to destroy_user_session_path, method: :delete do %>
       <i class="fas fa-sign-out-alt"></i>
-    <% end %>
-</div>
+      <% end %>
+    </div>
     <div class="card-show-infos">
-
       <div class="profile-image-wrapper flip-right">
         <div class="image-card">
           <div class="front">
-              <% if @dog.photo.present? %>
-              <%= cl_image_tag @dog.photo, alt: "dog photo", class: "card-show-user" %>
+            <% if @dog.photo.present? %>
+            <%= cl_image_tag @dog.photo, alt: "dog photo", class: "card-show-user" %>
 
-              <% else %>
-              <%= image_tag "#", alt: "dog", class: "card-show-user" %>
-              <% end %>
+            <% else %>
+            <%= image_tag "#", alt: "dog", class: "card-show-user" %>
+            <% end %>
           </div>
 
           <div class="back">
             <% if @user.photo.present? %>
-              <%= cl_image_tag @dog.user.photo, alt: "user photo", class: "card-show-user" %>
-              <% else %>
-              <%= image_tag "#", alt: "user", class: "card-show-user" %>
-              <% end %>
+            <%= cl_image_tag @dog.user.photo, alt: "user photo", class: "card-show-user" %>
+            <% else %>
+            <%= image_tag "#", alt: "user", class: "card-show-user" %>
+            <% end %>
           </div>
-
         </div>
       </div>
-
       <div>
         <%= image_tag("flip-image.png", :alt => "flip", :id =>"flip") %>
       </div>
-
-
       <div class="dog-info">
         <h2><%= @dog.name %></h2>
         <% if @chat_room %>
@@ -49,27 +44,20 @@
         class: 'btn btn-primary chat-btn'
           %>
           <% end %>
-       </div>
+        </div>
 
-    </div>
-
-
+      </div>
       <div class="owner-links">
         <p>Proud owner: @<%= @dog.user.full_name %> </p>
         <div class="social-media">
-  <!--         <a href="#"><i class="fab fa-instagram"></i></a> -->
+          <!--         <a href="#"><i class="fab fa-instagram"></i></a> -->
           <%= image_tag("instagram.png", :alt => "insta", :id =>"insta") %>
           <a href="#"><i class="fab fa-facebook"></i></a>
         </div>
       </div>
+    </div>
 
-
-  </div>
-
-
-
-
-  <!-- purple card & green card -->
+    <!-- purple card & green card -->
     <div class="info-card">
       <h3>Info</h3>
       <div class="col-info">
@@ -84,26 +72,26 @@
 
 
 
-  <div class="activities">
-    <h3>Activities</h3>
-    <div class="activities-card">
-      <div class="row">
-        <div class="col pr-0">
-          <ul>
-          <% @dog.activities[0..1].each do |activity| %>
-          <li><%= activity.name %></li>
-          <% end %>
-          </ul>
-        </div>
+    <div class="activities">
+      <h3>Activities</h3>
+      <div class="activities-card">
+        <div class="row">
+          <div class="col pr-0">
+            <ul>
+              <% @dog.activities[0..1].each do |activity| %>
+              <li><%= activity.name %></li>
+              <% end %>
+            </ul>
+          </div>
 
-        <div class="col pl-0">
-          <ul>
-          <% @dog.activities[2..3].each do |activity| %>
-          <li><%= activity.name %></li>
-          <% end %>
-          </ul>
+          <div class="col pl-0">
+            <ul>
+              <% @dog.activities[2..3].each do |activity| %>
+              <li><%= activity.name %></li>
+              <% end %>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
   </div>
-
