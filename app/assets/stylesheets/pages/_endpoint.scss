@@ -3,13 +3,12 @@
 
 body {
   margin: 0;
-  overflow: hidden;
 }
 
 .wrapper {
   position: relative;
-  min-height: 100vh;
-  // z-index: -1;
+  min-height: 90vh;
+  overflow: hidden;
 }
 
 [class|="confetti"] {
