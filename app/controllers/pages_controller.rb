@@ -10,17 +10,27 @@ class PagesController < ApplicationController
     @markers = @users.map do |user|
       if user == current_user
         dog_image = helpers.asset_url('dog_crown.png')
-      else
-        dog_image = helpers.asset_url('logo.png')
-      end
-      {
+        {
         lat: user.latitude,
         lng: user.longitude,
         infoWindow: render_to_string(partial: "info_window", locals: { user: user }),
         image_url: dog_image,
-        user: user
+        owner: true
         # image_url: user.dog.photo_url
       }
+      else
+        dog_image = helpers.asset_url('logo.png')
+              {
+        lat: user.latitude,
+        lng: user.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { user: user }),
+        image_url: dog_image,
+        user: user,
+        owner: false
+        # image_url: user.dog.photo_url
+      }
+      end
+
     end
   end
 
