@@ -48,6 +48,8 @@ function pointOnLine(angle) {
     };
 }
 
+// comment to repush code to github
+
 const initMapbox = () => {
     if (mapElement) {
         const map = buildMap();
