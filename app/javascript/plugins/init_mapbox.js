@@ -26,8 +26,8 @@ const addMarkersToMap = (map, markers) => {
         element.style.backgroundImage = `url('${marker.image_url}')`;
         element.style.backgroundSize = 'contain';
         if (marker.owner) {
-          element.style.width = '50px';
-          element.style.height = '42px';
+          element.style.width = '62px';
+          element.style.height = '54px';
         } else {
           element.style.width = '35px';
           element.style.height = '32px';
