@@ -89,5 +89,17 @@ h1 span:nth-child(5) { animation-delay: .4s; }
   background: linear-gradient(90deg, rgba(115,255,205,1) 14%, rgba(0,212,255,1) 85%);
   border-radius: 13px;
   font-weight: bold;
+  width: 110px;
+  font-size: 20px;
+  margin-top: 110px;
 }
 
+.homepage-logo {
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+}
+
+.homepage-logo img {
+  height: 25px;
+}
