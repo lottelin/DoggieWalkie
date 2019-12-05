@@ -128,6 +128,11 @@ font-size: 16px;
 
 // info
 
+
+ul#info-list {
+  list-style-type: none;
+}
+
 .info-card {
   // background-color: $primary;
   background: rgb(115,255,205);
@@ -168,6 +173,13 @@ font-size: 16px;
 
 
 // activity
+
+ul#activity-list {
+  list-style-type: none;
+}
+ul#activities-list {
+  list-style-type: none;
+}
 
 .activities {
   // background-color: $primary;
