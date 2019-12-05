@@ -66,14 +66,19 @@ input.form-control {
 }
 
 .form-control {
-  width: 72vw;
+  width: 70vw;
+  border-radius: 13px;
+  height:45px !important;
+  margin-right:5px;
 }
 
 
+
 .chat-header {
-  background-color: #73FFCD;
+  background: linear-gradient(90deg, rgba(115,255,205,1) 14%, rgba(0,212,255,1) 85%);
   color: black;
   padding: 10px 20px;
+  border-radius: 13px;
   margin-top: 10px;
   h4 {
     margin: 0;
@@ -81,9 +86,11 @@ input.form-control {
 }
 
 #send-btn {
-  height: 62px;
+  height: 45px;
   text-transform: uppercase;
   letter-spacing: 2px;
+  border-radius: 13px;
+  background: linear-gradient(90deg, rgba(115,255,205,1) 14%, rgba(0,212,255,1) 85%);
 }
 
 #end-point-button {
@@ -92,8 +99,17 @@ input.form-control {
   width: 92%;
 }
 
+.btn-block {
+  background: linear-gradient(90deg, rgba(115,255,205,1) 14%, rgba(0,212,255,1) 85%);
+  border-radius: 13px;
+  height:45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 #chatinput {
   position: fixed;
-  bottom: 50px;
+  bottom: 60px;
   width: 100%;
 }
