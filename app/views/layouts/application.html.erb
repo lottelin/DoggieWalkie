@@ -24,11 +24,14 @@
   <!-- This is for login flashes -->
   <%#= render 'shared/flashes' %>
   <%= yield %>
-  <% if user_signed_in? %>
-    <%= render 'shared/footer' %>
-   <% end %>
-    <%= javascript_include_tag 'application' %>
+  <% unless action_name == "homepage" %>
+    <% if user_signed_in? %>
+      <%= render 'shared/footer' %>
+    <% end %>
+  <% end %>
+
+  <%= javascript_include_tag 'application' %>
     <%= yield :after_js%>
-    <%= javascript_pack_tag 'application' %>
+  <%= javascript_pack_tag 'application' %>
   </body>
 </html>

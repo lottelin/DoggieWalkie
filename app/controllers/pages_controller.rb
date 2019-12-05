@@ -37,4 +37,7 @@ class PagesController < ApplicationController
   def endpoint
   end
 
+  def homepage
+  end
+
 end
