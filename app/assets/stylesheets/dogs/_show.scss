@@ -9,7 +9,7 @@
   margin: 10px;
   p {
     font-size: 12px;
-    opacity: .7;
+    // opacity: .7;
     margin: 0;
   }
 
@@ -85,6 +85,7 @@
   margin-top: 40px;
   border-radius:20px;
   padding:10px 20px;
+  background: linear-gradient(90deg, rgba(115,255,205,1) 14%, rgba(0,212,255,1) 85%);
 }
 
 .front {
@@ -130,7 +131,7 @@ font-size: 16px;
 
 .info-card {
   // background-color: $primary;
-  background: rgb(115,255,205);
+  // background: rgb(115,255,205);
   background: linear-gradient(90deg, rgba(115,255,205,1) 14%, rgba(0,212,255,1) 85%);
   height: 148px;
   width: 355px;
