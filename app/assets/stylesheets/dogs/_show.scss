@@ -130,6 +130,11 @@ font-size: 16px;
 
 // info
 
+
+ul#info-list {
+  list-style-type: none;
+}
+
 .info-card {
   background: linear-gradient(90deg, rgba(115,255,205,1) 14%, rgba(0,212,255,1) 85%);
   height: 148px;
@@ -168,6 +173,13 @@ font-size: 16px;
 
 
 // activity
+
+ul#activity-list {
+  list-style-type: none;
+}
+ul#activities-list {
+  list-style-type: none;
+}
 
 .activities {
   // background-color: $primary;

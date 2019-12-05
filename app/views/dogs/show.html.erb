@@ -61,7 +61,7 @@
     <div class="info-card">
       <h3>Info</h3>
       <div class="col-info">
-        <ul>
+        <ul id="info-list">
           <li>Breed -  <%= @dog.breed %></li>
           <li>Age -  <%= @dog.age %></li>
           <li>Sex - <%= @dog.sex %></li>
@@ -77,7 +77,7 @@
       <div class="activities-card">
         <div class="row">
           <div class="col pr-0">
-            <ul>
+            <ul id="activity-list">
               <% @dog.activities[0..1].each do |activity| %>
               <li><%= activity.name %></li>
               <% end %>
@@ -85,7 +85,7 @@
           </div>
 
           <div class="col pl-0">
-            <ul>
+            <ul id="activities-list">
               <% @dog.activities[2..3].each do |activity| %>
               <li><%= activity.name %></li>
               <% end %>
