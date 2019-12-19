@@ -31,7 +31,7 @@
 
 // dog & owner profile photo
 .card-show-user {
-    position: absolute;
+    position: relative;
     left: 50%;
     margin-left: -100px;
     top: 50%;
@@ -138,7 +138,7 @@ ul#info-list {
 .info-card {
   background: linear-gradient(90deg, rgba(115,255,205,1) 14%, rgba(0,212,255,1) 85%);
   height: 148px;
-  width: 355px;
+  // width: 355px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 13px;
   margin: 15px 10px 10px 10px;
@@ -155,7 +155,7 @@ ul#info-list {
   background-color: white;
   border-radius: 13px;
   height: 110px;
-  width: 355px;
+  // width: 355px;
   padding: 5px 10px 10px 2px;
   margin: 0;
   font-size: 17px;
@@ -184,10 +184,8 @@ ul#activities-list {
 }
 
 .activities {
-  // background-color: $primary;
- background: rgb(115,255,205);
-background: linear-gradient(90deg, rgba(115,255,205,1) 14%, rgba(0,212,255,1) 85%);
-  // box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  background: rgb(115,255,205);
+  background: linear-gradient(90deg, rgba(115,255,205,1) 14%, rgba(0,212,255,1) 85%);
   border-radius: 13px;
   margin: 15px 10px 10px 10px;
 }
@@ -198,7 +196,7 @@ background: linear-gradient(90deg, rgba(115,255,205,1) 14%, rgba(0,212,255,1) 85
   align-items: center;
   background-color: white;
   height: 65px;
-  width: 355px;
+  // width: 355px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 13px;
   font-size: 17px;
