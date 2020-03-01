@@ -45,7 +45,7 @@ $colors: (#73FFCD, #ffbf00, #263672, #e362ad);
 .signin-doghead {
   z-index: 1;
   width: 160px;
-  margin-left: 20px;
+  margin: 10px;
   margin-top: 90px;
   margin-bottom: 20px;
   animation: shake 3s cubic-bezier(.36,.07,.19,.97) both;
@@ -67,11 +67,13 @@ $colors: (#73FFCD, #ffbf00, #263672, #e362ad);
   z-index: 100;
   position: absolute;
   top: 150px;
-  left: 93px;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 
 
 .endinghead h2 {
   font-weight: bold;
+  text-align: center;
 }
 
