@@ -10,9 +10,16 @@ margin-top: 5vh;
  margin-top: 15vh;
 }
 
-.form-actions {
- margin: 20px auto;
- border-radius:20px;
- padding:10px 20px;
- background: linear-gradient(90deg, rgba(115,255,205,1) 14%, rgba(0,212,255,1) 85%); 
+.sign-up-page-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 189px;
+    height: 42px;
+    background: linear-gradient(90deg, rgba(115,255,205,1) 14%, rgba(0,212,255,1) 85%);
+    box-sizing: border-box;
+    border-radius: 26px;
+    color: black;
+    font-size: 18px;
 }
