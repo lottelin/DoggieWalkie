@@ -29,6 +29,13 @@
   justify-content: space-around;
 }
 
+// .wrapper {
+//   position: relative;
+//   left: 35%;
+//   width: 200px;
+//   height: 100px;
+// }
+
 // dog & owner profile photo
 .card-show-user {
     position: relative;
@@ -49,7 +56,6 @@
   }
 }
 
-
 .card-show-infos {
     display: flex;
     justify-content: center;
@@ -58,16 +64,16 @@
     margin-top: 95px;
   }
 
-#flip {
-  width: 35px;
-  height: 35px;
-  margin-left: 230px;
-  z-index: 1;
-  position: absolute;
-  margin-top: -40px;
-  border-radius: 50%;
-  background: white;
-}
+// #flip {
+//   width: 35px;
+//   height: 35px;
+//   margin-left: 230px;
+//   z-index: 1;
+//   position: absolute;
+//   margin-top: -40px;
+//   border-radius: 50%;
+//   background: white;
+// }
 
 .dog-info {
   font-size: 27px;
@@ -219,6 +225,7 @@ ul#activities-list {
   padding: 7px 0px 0px 22px;
   letter-spacing: 2px;
 }
+
 
 
 
