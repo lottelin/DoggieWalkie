@@ -28,4 +28,5 @@ DoggieWalkie Team Presentation from 15:30 to 19:00.
 ## Role
 - Project lead
 - Lead front-end designer
+- Backend 
 - Project pitch and presenter
