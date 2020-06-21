@@ -6,6 +6,7 @@ It contains a real time map showing nearby dog walkers' locations and their dogs
 http://www.doggiewalkie.club/
 - sign in: charlotte@example.com
 - password:123456
+- Click `inspect` and set the mode to `responsive` `iphoneX` or `iphone6/7/8`
 
 ### DoggieWalkie Product Pitch Presentation at Factory Berlin
 [Presentation Youtube link](http://shorturl.at/hzVY7)
@@ -16,7 +17,7 @@ DoggieWalkie Team Presentation from 15:30 to 19:00.
 
 ## Built with
 - Ruby on Rails
-- css, html
+- css, html (The frontend elements' relative positions are based on iphoneX)
 - Postgres database
 - Deployed on Heroku
 
