@@ -18,20 +18,20 @@ DoggieWalkie Team Presentation from 15:30 to 19:00.
 <img src="https://media.giphy.com/media/TLVEHWmO52cFhCAFh5/giphy.gif" align="middle"/>
 <br><br>
 
----
-<br><br>
-## Tech Stacks
+
+### Tech Stacks
 - Ruby on Rails
 - css, html (The frontend elements' relative positions are based on iphoneX)
 - Postgres database
 - Deployed on Heroku
-
-## Key technologies
+<br><br>
+### Key technologies
 - Mapbox
 - Action Cable for real time chat
-
-## Role
+<br><br>
+### Role
 - Project lead
 - Lead front-end designer
 - Backend 
 - Project pitch and presenter
+<br><br>
